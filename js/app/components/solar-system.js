@@ -72,7 +72,11 @@ define('components/solar-system', [
 
             this.createPlanets();
 
+            this.startTime();
+
             this.render();
+
+
         },
 
         createPlanets : function () {
@@ -91,6 +95,15 @@ define('components/solar-system', [
 
         },
 
+        startTime : function () {
+            this.planetsInstances.forEach(function (planet) {
+                setInterval(function(){ planet.updateTimesAround(3); }, 1000);
+                setInterval(function(){ planet.render(); }, 3000);
+            }.bind(this));
+
+
+        },
+
         render : function () {
 
             this.planetsInstances.forEach(function (planet) {
@@ -99,7 +112,8 @@ define('components/solar-system', [
 
             }.bind(this));
 
-        }
+
+        },
 
 
     };

@@ -24,18 +24,31 @@ define('components/planet', [
 
         };
 
-        this.renderStatic();
+        this.model.timesAround  = 0;
+
+       // this.updateTimesAround(3);
+
+        this.render();
     }
 
     Planet.prototype = {
 
-        renderStatic : function () {
+        render : function () {
 
             this.tpl.name.text(this.model.name);
 
             this.tpl.distance.text(this.model.distance);
 
-            this.tpl.timesAround.text(0);
+            this.tpl.timesAround.text(this.model.timesAround.toFixed(2));
+
+        },
+
+
+
+        updateTimesAround : function (period) {
+          var timesAround =  period / this.model.year;
+          this.model.timesAround  =  this.model.timesAround + timesAround;
+            console.log(this.model.name + this.model.timesAround );
         }
 
     };

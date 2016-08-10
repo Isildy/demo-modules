@@ -1,7 +1,7 @@
 {
   "name": "demo-modules",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Домашнее задание",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/powerbot15/demo-modules.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/powerbot15/demo-modules/issues"
   },
@@ -22,5 +22,8 @@
     "gulp-minify": "0.0.12",
     "jquery": "^3.0.0",
     "requirejs": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.1"
   }
 }
